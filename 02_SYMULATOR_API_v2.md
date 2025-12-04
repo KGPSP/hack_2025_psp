@@ -1,5 +1,9 @@
 # API Symulatora Nieśmiertelnik PSP v2.4
-## Dokumentacja dla uczestników hackathonu HackNation 2025
+## Dokumentacja dla uczestników hackathonu HackNation 2025 | Pula nagród: 25 000 PLN
+
+> **„Ratują innych, ryzykując własne życie. Czas, by technologia pomogła im w tym zadaniu. Stwórz rozwiązanie, które zwiększy bezpieczeństwo strażaków – nawet tam, gdzie nie ma sieci ani sygnału GPS."**
+
+**Strona wydarzenia:** https://hacknation.pl/ | **Mentor:** Michał Kłosiński - KG PSP
 
 **Symulator jest gotowy do użycia!** Generuje realistyczne dane telemetryczne z 6 strażaków, 15 beaconów UWB, bramki NIB, aparatów SCBA, czujników środowiskowych i systemu RECCO.
 

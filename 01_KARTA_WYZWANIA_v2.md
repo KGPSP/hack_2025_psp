@@ -1,6 +1,8 @@
 # 🔥 WYZWANIE: Cyfrowy Nieśmiertelnik PSP v2.4
 ## Hackathon GovTech 2025 – Pełna Specyfikacja
 
+> **„Ratują innych, ryzykując własne życie. Czas, by technologia pomogła im w tym zadaniu. Stwórz rozwiązanie, które zwiększy bezpieczeństwo strażaków – nawet tam, gdzie nie ma sieci ani sygnału GPS."**
+
 ---
 
 ## 📋 METADANE WYZWANIA
@@ -9,10 +11,12 @@
 |----------|---------|
 | **Instytucja** | Komenda Główna Państwowej Straży Pożarnej |
 | **Biuro** | Biuro Informatyki i Łączności (BIŁ) |
+| **Mentor wyzwania** | Michał Kłosiński - KG PSP |
 | **Kategoria** | Bezpieczeństwo ratowników / IoT / RTLS |
 | **Wydarzenie** | HackNation 2025, 06–07.12.2025, Bydgoskie Centrum Targowo-Wystawiennicze (ul. Gdańska 187, Bydgoszcz) |
+| **Strona wydarzenia** | https://hacknation.pl/ |
 | **Poziom trudności** | ⭐⭐⭐⭐ (zaawansowany) |
-| **Pula nagród** | 30 000 PLN |
+| **Pula nagród** | 25 000 PLN |
 | **Czas trwania** | 24 godziny |
 | **Formalności** | Regulaminy, zgody na wizerunek, umowa przeniesienia praw — zob. `FORMALNO_PRAWNE_HACKNATION.md` |
 
@@ -610,33 +614,43 @@ ws.send(JSON.stringify({ command: "set_speed", speed: 2.0 }));
 
 ---
 
-## ⏰ HARMONOGRAM 24H
+## ⏰ HARMONOGRAM OFICJALNY
+
+### Sobota, 6 grudnia 2025
+| Czas | Wydarzenie |
+|------|------------|
+| 10:30 | **Ceremonia otwarcia** |
+| 11:00 | **START KODOWANIA** – pełne szczegóły zadań udostępnione |
+
+### Niedziela, 7 grudnia 2025
+| Czas | Wydarzenie |
+|------|------------|
+| 11:00 | **KONIEC KODOWANIA** – rozpoczęcie oceniania |
+| 15:30 | **Prezentacje projektów** (faza 2 oceny) |
+| 17:45 | **Ceremonia zamknięcia i ogłoszenie wyników** |
+
+### Sugerowany plan pracy zespołu (24h)
 
 | Czas | Faza | Kamień milowy |
 |------|------|---------------|
-| 0:00 | START | Zapoznanie z wyzwaniem |
-| 0-2h | Analiza | Zrozumienie problemu, plan pracy |
-| 2-6h | Sprint 1 | Połączenie z API, podstawowa mapa |
-| 6:00 | **CHECKPOINT 1** | Demo: mapa + pozycje aktualizują się |
-| 6-12h | Sprint 2 | Panel parametrów, alarmy, beacony |
-| 12:00 | **CHECKPOINT 2** | Demo: pełne MVP działa |
-| 12-18h | Sprint 3 | Dokumentacja HW, algorytm fuzji |
-| 18:00 | **CHECKPOINT 3** | Dokumentacja HW gotowa |
-| 18-22h | Polish | Testy, UI, dokumentacja |
-| 22:00 | **CODE FREEZE** | Ostatni commit |
-| 22-23h | Przygotowanie | Prezentacja (max 10 slajdów) |
-| 23:00 | **PREZENTACJE** | 10 min + 5 min Q&A |
-| 24:00 | **WYNIKI** | Ogłoszenie zwycięzców |
+| 11:00-13:00 | Analiza | Zrozumienie problemu, plan pracy |
+| 13:00-17:00 | Sprint 1 | Połączenie z API, podstawowa mapa |
+| 17:00 | **CHECKPOINT 1** | Demo: mapa + pozycje aktualizują się |
+| 17:00-23:00 | Sprint 2 | Panel parametrów, alarmy, beacony |
+| 23:00 | **CHECKPOINT 2** | Demo: pełne MVP działa |
+| 23:00-05:00 | Sprint 3 | Dokumentacja HW, algorytm fuzji |
+| 05:00 | **CHECKPOINT 3** | Dokumentacja HW gotowa |
+| 05:00-09:00 | Polish | Testy, UI, dokumentacja |
+| 09:00 | **CODE FREEZE** | Ostatni commit |
+| 09:00-11:00 | Przygotowanie | Prezentacja końcowa |
 
 ---
 
 ## 🏅 NAGRODY
 
-| Miejsce | Nagroda | Dodatkowe |
-|---------|---------|-----------|
-| 🥇 1. miejsce | **15 000 PLN** | Kontynuacja projektu z PSP |
-| 🥈 2. miejsce | **10 000 PLN** | Referencje |
-| 🥉 3. miejsce | **5 000 PLN** | Referencje |
+**Pula nagród: 25 000 PLN**
+
+Szczegółowy podział nagród zostanie ogłoszony przez organizatora wydarzenia HackNation 2025.
 
 **Nagroda specjalna:** Najlepsza koncepcja RECCO – zaproszenie na szkolenie z technologii RECCO
 
@@ -739,7 +753,9 @@ A: Szczegółowa dokumentacja wszystkich pól znajduje się w `02_SYMULATOR_API_
 
 ## 📞 KONTAKT
 
+- **Strona wydarzenia:** https://hacknation.pl/
 - **Discord:** https://discord.com/invite/Kn7mhgVqHV
+- **Mentor wyzwania:** Michał Kłosiński - KG PSP
 
 ---
 

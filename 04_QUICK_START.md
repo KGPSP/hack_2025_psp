@@ -1,6 +1,8 @@
 # Quick Start - Cyfrowy Nieśmiertelnik PSP v2.4
 ## Przewodnik szybkiego startu dla uczestników hackathonu
-### HackNation 2025
+### HackNation 2025 | Pula nagród: 25 000 PLN
+
+> **„Ratują innych, ryzykując własne życie. Czas, by technologia pomogła im w tym zadaniu. Stwórz rozwiązanie, które zwiększy bezpieczeństwo strażaków – nawet tam, gdzie nie ma sieci ani sygnału GPS."**
 
 ---
 
@@ -368,23 +370,38 @@ curl -X POST https://niesmiertelnik.replit.app/api/v1/simulation/control \
 
 ---
 
-## Sugerowany harmonogram (24h)
+## Harmonogram oficjalny HackNation 2025
+
+### Sobota, 6 grudnia 2025
+| Czas | Wydarzenie |
+|------|------------|
+| 10:30 | Ceremonia otwarcia |
+| 11:00 | **START KODOWANIA** |
+
+### Niedziela, 7 grudnia 2025
+| Czas | Wydarzenie |
+|------|------------|
+| 11:00 | **KONIEC KODOWANIA** |
+| 15:30 | Prezentacje projektów |
+| 17:45 | Ceremonia zamknięcia |
+
+### Sugerowany plan pracy (24h)
 
 | Czas | Zadanie | Cel |
 |------|---------|-----|
-| 0-1h | Setup + zapoznanie | Symulator działa, API rozumiane |
-| 1-3h | Mapa 2D + markery | Strażacy widoczni na mapie |
-| 3-5h | Panel parametrów | HR, bateria, status widoczne |
-| 5-6h | **CHECKPOINT 1** | Demo: podstawowa wizualizacja |
-| 6-8h | Alarmy | Man-down działa i jest widoczny |
-| 8-10h | Beacony | Status beaconów na mapie |
-| 10-12h | **CHECKPOINT 2** | Demo: MVP kompletne |
-| 12-16h | Dokumentacja HW | Schemat + BOM dla tagu |
-| 16-18h | **CHECKPOINT 3** | Demo: HW docs gotowe |
-| 18-20h | Polish | UI, testy, edge cases |
-| 20-22h | Bonus features | 3D, historia, RECCO |
-| 22h | **CODE FREEZE** | Ostatni commit |
-| 22-24h | Prezentacja | Slajdy, demo, Q&A |
+| 11:00-13:00 | Setup + zapoznanie | Symulator działa, API rozumiane |
+| 13:00-15:00 | Mapa 2D + markery | Strażacy widoczni na mapie |
+| 15:00-17:00 | Panel parametrów | HR, bateria, status widoczne |
+| 17:00 | **CHECKPOINT 1** | Demo: podstawowa wizualizacja |
+| 17:00-19:00 | Alarmy | Man-down działa i jest widoczny |
+| 19:00-21:00 | Beacony | Status beaconów na mapie |
+| 21:00-23:00 | **CHECKPOINT 2** | Demo: MVP kompletne |
+| 23:00-03:00 | Dokumentacja HW | Schemat + BOM dla tagu |
+| 03:00-05:00 | **CHECKPOINT 3** | Demo: HW docs gotowe |
+| 05:00-07:00 | Polish | UI, testy, edge cases |
+| 07:00-09:00 | Bonus features | 3D, historia, RECCO |
+| 09:00 | **CODE FREEZE** | Ostatni commit |
+| 09:00-11:00 | Prezentacja | Przygotowanie slajdów, demo |
 
 ---
 
@@ -404,8 +421,10 @@ curl -X POST https://niesmiertelnik.replit.app/api/v1/simulation/control \
 
 ## Pomoc
 
+- **Strona wydarzenia:** https://hacknation.pl/
 - **Dokumentacja API:** `02_SYMULATOR_API_v2.md`
 - **Discord:** https://discord.com/invite/Kn7mhgVqHV
+- **Mentor wyzwania:** Michał Kłosiński - KG PSP
 
 **Nie bój się pytać!** Lepiej zapytać i iść dalej niż tkwić w miejscu.
 

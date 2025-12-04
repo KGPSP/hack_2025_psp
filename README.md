@@ -1,6 +1,10 @@
 # Cyfrowy Nieśmiertelnik PSP v2.4
 ## Kompletny pakiet wyzwania hackathonowego
 
+> **„Ratują innych, ryzykując własne życie. Czas, by technologia pomogła im w tym zadaniu. Stwórz rozwiązanie, które zwiększy bezpieczeństwo strażaków – nawet tam, gdzie nie ma sieci ani sygnału GPS."**
+
+**Pula nagród: 25 000 PLN**
+
 **HackNation 2025** — 06–07.12.2025, Bydgoskie Centrum Targowo-Wystawiennicze (ul. Gdańska 187, Bydgoszcz).
 
 **Symulator:** https://niesmiertelnik.replit.app
@@ -264,7 +268,9 @@ Pełna dokumentacja API: `02_SYMULATOR_API_v2.md`
 
 ## Kontakt
 
+- **Strona wydarzenia:** https://hacknation.pl/
 - **Discord:** https://discord.com/invite/Kn7mhgVqHV
+- **Mentor wyzwania:** Michał Kłosiński - KG PSP
 
 ---
 

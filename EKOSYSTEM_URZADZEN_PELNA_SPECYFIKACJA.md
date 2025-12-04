@@ -1,6 +1,10 @@
 # Ekosystem Urządzeń „Cyfrowy Nieśmiertelnik PSP"
 ## Pełna Specyfikacja Techniczna
-### HackNation 2025
+### HackNation 2025 | Pula nagród: 25 000 PLN
+
+> **„Ratują innych, ryzykując własne życie. Czas, by technologia pomogła im w tym zadaniu. Stwórz rozwiązanie, które zwiększy bezpieczeństwo strażaków – nawet tam, gdzie nie ma sieci ani sygnału GPS."**
+
+**Strona wydarzenia:** https://hacknation.pl/ | **Mentor:** Michał Kłosiński - KG PSP
 
 **Wersja:** 2.4
 **Status:** Dokumentacja dla hackathonu
