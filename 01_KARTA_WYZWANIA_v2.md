@@ -1,4 +1,4 @@
-# 🔥 WYZWANIE: Cyfrowy Nieśmiertelnik PSP v2.4
+# 🔥 WYZWANIE: Cyfrowy Nieśmiertelnik PSP v2.7
 ## Hackathon GovTech 2025 – Pełna Specyfikacja
 
 > **„Ratują innych, ryzykując własne życie. Czas, by technologia pomogła im w tym zadaniu. Stwórz rozwiązanie, które zwiększy bezpieczeństwo strażaków – nawet tam, gdzie nie ma sieci ani sygnału GPS."**
@@ -279,7 +279,7 @@ Pełna struktura pakietu telemetrycznego z tagu strażaka:
   "scba": {
     "id": "SCBA-001",
     "manufacturer": "Dräger",
-    "model": "PSS 5000",
+    "model": "PSS 7000",
     "cylinder_pressure_bar": 280,
     "max_pressure_bar": 300,
     "consumption_rate_lpm": 45,
@@ -712,7 +712,7 @@ Piętra:
 
 Wejścia: Główne, Boczne, Techniczne
 Klatka schodowa: (x=35, y=20) - wszystkie piętra
-Beaconów UWB: 15 szt.
+Beaconów UWB: 17 szt.
 ```
 
 ### Zewnętrzne
@@ -777,5 +777,5 @@ A: Szczegółowa dokumentacja wszystkich pól znajduje się w `02_SYMULATOR_API_
 
 ---
 
-*Karta Wyzwania v2.4 – Cyfrowy Nieśmiertelnik PSP*
+*Karta Wyzwania v2.7 – Cyfrowy Nieśmiertelnik PSP*
 *HackNation 2025 – Grudzień 2025*

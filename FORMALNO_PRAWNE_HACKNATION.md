@@ -1,6 +1,6 @@
 # Formalno-prawne materiały HackNation 2025
 
-## Cyfrowy Nieśmiertelnik PSP v2.4
+## Cyfrowy Nieśmiertelnik PSP v2.7
 
 > **„Ratują innych, ryzykując własne życie. Czas, by technologia pomogła im w tym zadaniu. Stwórz rozwiązanie, które zwiększy bezpieczeństwo strażaków – nawet tam, gdzie nie ma sieci ani sygnału GPS."**
 
@@ -115,4 +115,4 @@ Cała komunikacja odbywa się przez oficjalny kanał Discord.
 ---
 
 *Formalno-prawne materiały HackNation 2025*
-*Cyfrowy Nieśmiertelnik PSP v2.4 - Grudzień 2025*
+*Cyfrowy Nieśmiertelnik PSP v2.7 - Grudzień 2025*

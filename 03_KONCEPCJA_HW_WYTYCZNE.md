@@ -1,6 +1,6 @@
 # 03. Koncepcja Hardware - Wytyczne dla Uczestników
 ## Jak przygotować dokumentację sprzętową na hackathonie
-### HackNation 2025 - Cyfrowy Nieśmiertelnik PSP v2.4 | Pula nagród: 25 000 PLN
+### HackNation 2025 - Cyfrowy Nieśmiertelnik PSP v2.7 | Pula nagród: 25 000 PLN
 
 > **„Ratują innych, ryzykując własne życie. Czas, by technologia pomogła im w tym zadaniu. Stwórz rozwiązanie, które zwiększy bezpieczeństwo strażaków – nawet tam, gdzie nie ma sieci ani sygnału GPS."**
 
@@ -39,7 +39,7 @@ Narysuj schemat pokazujący wszystkie moduły i ich połączenia.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                           TAG NIEŚMIERTELNIK v2.4                            │
+│                           TAG NIEŚMIERTELNIK v2.7                            │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐      │
@@ -236,7 +236,7 @@ Oprócz tagu nieśmiertelnika, wyzwanie obejmuje również **beacon UWB** (kotwi
 **Schemat blokowy:**
 ```
 ┌─────────────────────────────────────────────────────┐
-│                   BEACON UWB v2.4                   │
+│                   BEACON UWB v2.7                   │
 ├─────────────────────────────────────────────────────┤
 │                                                     │
 │  ┌──────────┐        ┌──────────┐                  │
@@ -380,7 +380,7 @@ Montaż:         Magnes neodymowy + taśma 3M VHB
 
 ---
 
-*Wytyczne Hardware v2.4 - Cyfrowy Nieśmiertelnik PSP*
+*Wytyczne Hardware v2.7 - Cyfrowy Nieśmiertelnik PSP*
 *HackNation 2025 - Grudzień 2025*
 
 **Powodzenia z dokumentacją hardware!**

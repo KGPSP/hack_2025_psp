@@ -1,6 +1,6 @@
 # Technologia RECCO w Systemie Nieśmiertelnik PSP
 ## Pasywny System Lokalizacji Ratowników
-### HackNation 2025 - Cyfrowy Nieśmiertelnik PSP v2.4 | Pula nagród: 25 000 PLN
+### HackNation 2025 - Cyfrowy Nieśmiertelnik PSP v2.7 | Pula nagród: 25 000 PLN
 
 > **„Ratują innych, ryzykując własne życie. Czas, by technologia pomogła im w tym zadaniu. Stwórz rozwiązanie, które zwiększy bezpieczeństwo strażaków – nawet tam, gdzie nie ma sieci ani sygnału GPS."**
 
@@ -646,5 +646,5 @@ Proponując alternatywę, rozważ:
 *Dokument opracowany przez BIŁ KG PSP*
 *Na podstawie materiałów RECCO AB oraz analizy wdrożeń w służbach ratunkowych*
 
-*Technologia RECCO v2.4 - Cyfrowy Nieśmiertelnik PSP*
+*Technologia RECCO v2.7 - Cyfrowy Nieśmiertelnik PSP*
 *HackNation 2025 - Grudzień 2025*

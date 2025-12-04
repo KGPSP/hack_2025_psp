@@ -1,11 +1,11 @@
-# API Symulatora Nieśmiertelnik PSP v2.4
+# API Symulatora Nieśmiertelnik PSP v2.7
 ## Dokumentacja dla uczestników hackathonu HackNation 2025 | Pula nagród: 25 000 PLN
 
 > **„Ratują innych, ryzykując własne życie. Czas, by technologia pomogła im w tym zadaniu. Stwórz rozwiązanie, które zwiększy bezpieczeństwo strażaków – nawet tam, gdzie nie ma sieci ani sygnału GPS."**
 
 **Strona wydarzenia:** https://hacknation.pl/ | **Mentor:** Michał Kłosiński - KG PSP
 
-**Symulator jest gotowy do użycia!** Generuje realistyczne dane telemetryczne z 6 strażaków, 15 beaconów UWB, bramki NIB, aparatów SCBA, czujników środowiskowych i systemu RECCO.
+**Symulator jest gotowy do użycia!** Generuje realistyczne dane telemetryczne z 6 strażaków, 17 beaconów UWB, bramki NIB, aparatów SCBA, czujników środowiskowych i systemu RECCO.
 
 ---
 
@@ -101,8 +101,8 @@ Wysyłane jednokrotnie po połączeniu.
 {
   "type": "welcome",
   "timestamp": "2025-01-15T14:30:00.000Z",
-  "message": "Połączono z symulatorem Nieśmiertelnik PSP v2.4",
-  "simulator_version": "2.4.0",
+  "message": "Połączono z symulatorem Nieśmiertelnik PSP v2.7",
+  "simulator_version": "2.7.0",
   "capabilities": ["uwb", "imu", "barometer", "gps", "scba", "recco", "environment", "weather", "recording"]
 }
 ```
@@ -305,7 +305,7 @@ Wysyłana co 1 sekundę dla każdego tagu. **Rozszerzona struktura** z pełnymi 
   "scba": {
     "id": "SCBA-001",
     "manufacturer": "Dräger",
-    "model": "PSS 5000",
+    "model": "PSS 7000",
     "cylinder_pressure_bar": 280,
     "max_pressure_bar": 300,
     "consumption_rate_lpm": 45,
@@ -652,25 +652,25 @@ Zakres: 0.1 - 10.0
 
 ## 📍 Beacony UWB
 
-System wykorzystuje **15 beaconów UWB** rozstawionych w budynku szkoleniowym:
+System wykorzystuje **17 beaconów UWB** rozstawionych w budynku szkoleniowym:
 
-| ID | Nazwa | Pozycja (x,y,z) | Piętro | Typ |
-|----|-------|-----------------|--------|-----|
-| BCN-001 | Wejście główne | (2, 5, 0) | 0 | entry |
-| BCN-002 | Hol parter | (10, 12, 0) | 0 | interior |
-| BCN-003 | Magazyn chemiczny | (30, 18, 0) | 0 | hazard |
-| BCN-004 | Klatka parter | (35, 20, 0) | 0 | stairwell |
-| BCN-005 | Korytarz 1p | (10, 10, 3.2) | 1 | interior |
-| BCN-006 | Klatka 1p | (35, 20, 3.2) | 1 | stairwell |
-| BCN-007 | Sala szkoleniowa | (20, 15, 3.2) | 1 | interior |
-| BCN-008 | Korytarz 2p | (10, 10, 6.4) | 2 | interior |
-| BCN-009 | Klatka 2p | (35, 20, 6.4) | 2 | stairwell |
-| BCN-010 | Dach | (20, 12, 9.6) | 2 | exterior |
-| BCN-011 | Kotłownia | (10, 6, -3) | -1 | hazard |
-| BCN-012 | Korytarz piwnica | (20, 15, -3) | -1 | interior |
-| BCN-013 | Wejście techniczne | (20, 25, -3) | -1 | entry |
-| BCN-014 | Klatka piwnica | (35, 20, -3) | -1 | stairwell |
-| BCN-015 | Wejście boczne | (40, 20, 0) | 0 | entry |
+| ID | Nazwa | Pozycja (x,y,z) | Piętro | Typ | Zasięg |
+|----|-------|-----------------|--------|-----|--------|
+| BCN-B01 | Piwnica - wejście | (20, 24, -3.0) | -1 | entry | 15m |
+| BCN-B02 | Piwnica - kotłownia | (7, 6, -3.0) | -1 | hazard | 12m |
+| BCN-001 | Wejście główne | (2, 5, 0) | 0 | entry | 18m |
+| BCN-002 | Hol - centrum | (10, 5, 0) | 0 | anchor | 15m |
+| BCN-003 | Korytarz północny | (20, 11, 0) | 0 | anchor | 14m |
+| BCN-004 | Sala konferencyjna | (10, 19, 0) | 0 | anchor | 15m |
+| BCN-005 | Klatka schodowa - parter | (35, 19, 0) | 0 | stairs | 12m |
+| BCN-006 | Wejście boczne | (38, 20, 0) | 0 | entry | 16m |
+| BCN-101 | Open space - północ | (10, 5, 3.2) | 1 | anchor | 15m |
+| BCN-102 | Open space - południe | (10, 12, 3.2) | 1 | anchor | 14m |
+| BCN-103 | Sala szkoleń | (35, 7, 3.2) | 1 | anchor | 15m |
+| BCN-104 | Klatka schodowa - 1p | (35, 21, 3.2) | 1 | stairs | 12m |
+| BCN-201 | Sala A | (10, 6, 6.4) | 2 | anchor | 14m |
+| BCN-202 | Sala B | (30, 6, 6.4) | 2 | anchor | 15m |
+| BCN-203 | Laboratorium | (12, 20, 6.4) | 2 | anchor | 15m |
 
 ### Algorytm pozycjonowania
 
@@ -763,13 +763,13 @@ Status serwera i symulacji.
 ```json
 {
   "status": "ok",
-  "version": "2.4.0",
+  "version": "2.7.0",
   "uptime_s": 3600,
   "simulation_running": true,
   "simulation_speed": 1.0,
   "connected_clients": 3,
   "firefighters_count": 6,
-  "beacons_count": 15,
+  "beacons_count": 17,
   "active_alerts": 1
 }
 ```
@@ -1040,7 +1040,7 @@ asyncio.run(connect())
 
 ---
 
-## 🆕 Nowe funkcje w v2.4
+## 🆕 Nowe funkcje w v2.7
 
 - **Rozszerzona telemetria** - GPS, trilateration, drift, environment sensors
 - **System SCBA** - pełna symulacja aparatu powietrznego
@@ -1065,5 +1065,5 @@ asyncio.run(connect())
 
 ---
 
-*Dokumentacja API Symulatora Nieśmiertelnik PSP v2.4*
+*Dokumentacja API Symulatora Nieśmiertelnik PSP v2.7*
 *HackNation 2025 - Grudzień 2025*

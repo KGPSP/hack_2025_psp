@@ -1,4 +1,4 @@
-# Quick Start - Cyfrowy Nieśmiertelnik PSP v2.4
+# Quick Start - Cyfrowy Nieśmiertelnik PSP v2.7
 ## Przewodnik szybkiego startu dla uczestników hackathonu
 ### HackNation 2025 | Pula nagród: 25 000 PLN
 
@@ -136,7 +136,7 @@ curl -X POST https://niesmiertelnik.replit.app/api/v1/simulation/control \
 ├── shared/                  # Współdzielone typy
 │   └── schema.ts            # Zod schemas + DB tables
 │
-└── Dokumentacja_HACK/       # Dokumentacja hackathonu
+└── doc_hack/                # Dokumentacja hackathonu
     ├── README.md                 # Przegląd pakietu
     ├── 01_KARTA_WYZWANIA_v2.md
     ├── 02_SYMULATOR_API_v2.md    # ⭐ Dokumentacja API
@@ -434,5 +434,5 @@ curl -X POST https://niesmiertelnik.replit.app/api/v1/simulation/control \
 
 ---
 
-*Quick Start Guide - Cyfrowy Nieśmiertelnik PSP v2.4*
+*Quick Start Guide - Cyfrowy Nieśmiertelnik PSP v2.7*
 *HackNation 2025 - Grudzień 2025*

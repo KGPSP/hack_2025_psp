@@ -1,4 +1,4 @@
-# Cyfrowy Nieśmiertelnik PSP v2.4
+# Cyfrowy Nieśmiertelnik PSP v2.7
 ## Kompletny pakiet wyzwania hackathonowego
 
 > **„Ratują innych, ryzykując własne życie. Czas, by technologia pomogła im w tym zadaniu. Stwórz rozwiązanie, które zwiększy bezpieczeństwo strażaków – nawet tam, gdzie nie ma sieci ani sygnału GPS."**
@@ -123,7 +123,7 @@ Wyzwanie obejmuje **6 typów urządzeń**:
 
 ---
 
-## API Symulatora v2.4
+## API Symulatora v2.7
 
 ### WebSocket
 
@@ -251,7 +251,7 @@ Pełna dokumentacja API: `02_SYMULATOR_API_v2.md`
 - Wymiary: 40m × 25m × 12m
 - Piętra: -1 (Piwnica), 0 (Parter), 1, 2
 - GPS: 52.2297°N, 21.0122°E (Warszawa)
-- Beaconów: 15 szt.
+- Beaconów: 17 szt.
 - Strefy niebezpieczne: Kotłownia (piwnica), Magazyn chemiczny (parter)
 
 ---
@@ -297,5 +297,5 @@ Prawa autorskie: Komenda Główna Państwowej Straży Pożarnej, Biuro Informaty
 
 ---
 
-*Wersja 2.4 – Pełny ekosystem urządzeń z symulatorem zintegrowanym*
+*Wersja 2.7 – Pełny ekosystem urządzeń z symulatorem zintegrowanym*
 *HackNation 2025 – Grudzień 2025*

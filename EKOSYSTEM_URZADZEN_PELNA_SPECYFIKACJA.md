@@ -6,7 +6,7 @@
 
 **Strona wydarzenia:** https://hacknation.pl/ | **Mentor:** Michał Kłosiński - KG PSP
 
-**Wersja:** 2.4
+**Wersja:** 2.7
 **Status:** Dokumentacja dla hackathonu
 **Autor:** BIŁ KG PSP
 
@@ -760,5 +760,5 @@ Pełna dokumentacja API: `02_SYMULATOR_API_v2.md`
 
 *Dokument opracowany przez BIŁ KG PSP*
 
-*Ekosystem Urządzeń v2.4 – Cyfrowy Nieśmiertelnik PSP*
+*Ekosystem Urządzeń v2.7 – Cyfrowy Nieśmiertelnik PSP*
 *HackNation 2025 – Grudzień 2025*
