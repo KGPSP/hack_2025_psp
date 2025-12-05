@@ -1,11 +1,32 @@
-# API Symulatora Nieśmiertelnik PSP v2.7
-## Dokumentacja dla uczestników hackathonu HackNation 2025 | Pula nagród: 25 000 PLN
+# API Symulatora Nieśmiertelnik PSP
+## Dokumentacja v2.7.0 - Tryb Hackathonowy dla GovTech 2025 | Pula nagród: 25 000 PLN
 
 > **„Ratują innych, ryzykując własne życie. Czas, by technologia pomogła im w tym zadaniu. Stwórz rozwiązanie, które zwiększy bezpieczeństwo strażaków – nawet tam, gdzie nie ma sieci ani sygnału GPS."**
 
 **Strona wydarzenia:** https://hacknation.pl/ | **Mentor:** Michał Kłosiński - KG PSP
 
-**Symulator jest gotowy do użycia!** Generuje realistyczne dane telemetryczne z 6 strażaków, 17 beaconów UWB, bramki NIB, aparatów SCBA, czujników środowiskowych i systemu RECCO.
+**Symulator jest gotowy do użycia!** Generuje realistyczne dane telemetryczne z 6 strażaków, 18 beaconów UWB (zasięg 15m), bramki NIB, aparatów SCBA, czujników środowiskowych i systemu RECCO.
+
+---
+
+## 📋 Podsumowanie API
+
+| Komponent | Ilość | Częstotliwość | Opis |
+|-----------|-------|---------------|------|
+| **Strażacy** | 6 | - | Pełne wyposażenie: tag, HR band, SCBA, RECCO |
+| **Beacony UWB** | 18 | 5s status | Zasięg 15m, min. 3 do trilateracji |
+| **Bramka NIB** | 1 | 10s status | LoRa + LTE + WiFi + GPS |
+| **Telemetria** | 6 strumieni | 1 Hz | Pozycja, vitals, SCBA, środowisko |
+| **Alerty** | event-driven | - | 12 typów (man-down, SOS, CO, O2...) |
+| **Pogoda** | 1 stacja | 30s | Temperatura, wiatr, ciśnienie |
+
+### Endpointy
+
+| Typ | URL | Opis |
+|-----|-----|------|
+| **WebSocket** | `wss://niesmiertelnik.replit.app/ws` | Real-time telemetria i alerty |
+| **REST API** | `https://niesmiertelnik.replit.app/api/v1/` | On-demand queries i sterowanie |
+| **Frontend** | `https://niesmiertelnik.replit.app` | Wizualizacja mapy i statusów |
 
 ---
 
@@ -101,7 +122,7 @@ Wysyłane jednokrotnie po połączeniu.
 {
   "type": "welcome",
   "timestamp": "2025-01-15T14:30:00.000Z",
-  "message": "Połączono z symulatorem Nieśmiertelnik PSP v2.7",
+  "message": "Połączono z symulatorem Nieśmiertelnik PSP v2.7.0",
   "simulator_version": "2.7.0",
   "capabilities": ["uwb", "imu", "barometer", "gps", "scba", "recco", "environment", "weather", "recording"]
 }
@@ -196,7 +217,7 @@ Wysyłana jednokrotnie po połączeniu.
 }
 ```
 
-### 5. Telemetria z tagów (tag_telemetry) ⭐ GŁÓWNE DANE
+### 5. Telemetria z tagów (tag_telemetry) - GŁÓWNE DANE
 Wysyłana co 1 sekundę dla każdego tagu. **Rozszerzona struktura** z pełnymi danymi sensorycznymi.
 
 ```json
@@ -253,18 +274,56 @@ Wysyłana co 1 sekundę dla każdego tagu. **Rozszerzona struktura** z pełnymi 
     }
   },
 
+  "heading_deg": 45.2,
+
   "uwb_measurements": [
+    {
+      "beacon_id": "BCN-002",
+      "beacon_name": "Hol - centrum",
+      "range_m": 2.15,
+      "rssi_dbm": -45,
+      "fp_power_dbm": -42,
+      "rx_power_dbm": -47,
+      "los": true,
+      "nlos_probability": 0.02,
+      "timestamp": 1705329121234,
+      "quality": "excellent"
+    },
     {
       "beacon_id": "BCN-001",
       "beacon_name": "Wejście główne",
-      "range_m": 5.23,
+      "range_m": 8.23,
+      "rssi_dbm": -54,
+      "fp_power_dbm": -51,
+      "rx_power_dbm": -56,
+      "los": true,
+      "nlos_probability": 0.08,
+      "timestamp": 1705329121234,
+      "quality": "excellent"
+    },
+    {
+      "beacon_id": "BCN-007",
+      "beacon_name": "Centrum - północ",
+      "range_m": 10.82,
       "rssi_dbm": -58,
       "fp_power_dbm": -55,
       "rx_power_dbm": -60,
       "los": true,
       "nlos_probability": 0.12,
       "timestamp": 1705329121234,
-      "quality": "excellent"
+      "quality": "good"
+    },
+    {
+      "beacon_id": "BCN-003",
+      "beacon_name": "Korytarz północny",
+      "range_m": 12.05,
+      "rssi_dbm": -60,
+      "fp_power_dbm": -57,
+      "rx_power_dbm": -62,
+      "los": true,
+      "nlos_probability": 0.15,
+      "timestamp": 1705329121234,
+      "quality": "good"
     }
   ],
 
@@ -274,6 +333,16 @@ Wysyłana co 1 sekundę dla każdego tagu. **Rozszerzona struktura** z pełnymi 
     "mag": { "x": 22.5, "y": -5.2, "z": 42.1 },
     "orientation": { "roll": 2.1, "pitch": -1.5, "yaw": 45.2 },
     "temperature_c": 28.5
+  },
+
+  "pass_status": {
+    "status": "active",
+    "time_since_motion_s": 0,
+    "alarm_threshold_s": 30,
+    "pre_alarm_threshold_s": 20,
+    "sensitivity": "normal",
+    "alarm_active": false,
+    "alarm_acknowledged": false
   },
 
   "barometer": {
@@ -322,20 +391,20 @@ Wysyłana co 1 sekundę dla każdego tagu. **Rozszerzona struktura** z pełnymi 
   "recco": {
     "id": "RECCO-001",
     "type": "rescue",
-    "location": "Hełm",
+    "location": "ubiór ochronny - kurtka",
     "detected": false,
     "last_detected": null,
     "signal_strength": null,
     "estimated_distance_m": null,
     "bearing_deg": null,
-    "detector_id": "DET-001"
+    "detector_id": "RECCO-DET-001"
   },
 
   "black_box": {
     "recording": true,
     "storage_used_percent": 12,
     "records_count": 7200,
-    "write_rate_hz": 1
+    "write_rate_hz": 10
   },
 
   "device": {
@@ -650,36 +719,53 @@ Zakres: 0.1 - 10.0
 
 ---
 
-## 📍 Beacony UWB
+## Beacony UWB
 
-System wykorzystuje **17 beaconów UWB** rozstawionych w budynku szkoleniowym:
+System wykorzystuje **18 beaconów UWB** rozstawionych w budynku szkoleniowym.
 
-| ID | Nazwa | Pozycja (x,y,z) | Piętro | Typ | Zasięg |
-|----|-------|-----------------|--------|-----|--------|
-| BCN-B01 | Piwnica - wejście | (20, 24, -3.0) | -1 | entry | 15m |
-| BCN-B02 | Piwnica - kotłownia | (7, 6, -3.0) | -1 | hazard | 12m |
-| BCN-001 | Wejście główne | (2, 5, 0) | 0 | entry | 18m |
-| BCN-002 | Hol - centrum | (10, 5, 0) | 0 | anchor | 15m |
-| BCN-003 | Korytarz północny | (20, 11, 0) | 0 | anchor | 14m |
-| BCN-004 | Sala konferencyjna | (10, 19, 0) | 0 | anchor | 15m |
-| BCN-005 | Klatka schodowa - parter | (35, 19, 0) | 0 | stairs | 12m |
-| BCN-006 | Wejście boczne | (38, 20, 0) | 0 | entry | 16m |
-| BCN-101 | Open space - północ | (10, 5, 3.2) | 1 | anchor | 15m |
-| BCN-102 | Open space - południe | (10, 12, 3.2) | 1 | anchor | 14m |
-| BCN-103 | Sala szkoleń | (35, 7, 3.2) | 1 | anchor | 15m |
-| BCN-104 | Klatka schodowa - 1p | (35, 21, 3.2) | 1 | stairs | 12m |
-| BCN-201 | Sala A | (10, 6, 6.4) | 2 | anchor | 14m |
-| BCN-202 | Sala B | (30, 6, 6.4) | 2 | anchor | 15m |
-| BCN-203 | Laboratorium | (12, 20, 6.4) | 2 | anchor | 15m |
+### Kluczowe parametry UWB
+
+| Parametr | Wartość | Opis |
+|----------|---------|------|
+| **Maksymalny zasięg** | **15 m** | Tag odbiera sygnał tylko od beaconów w odległości ≤15m |
+| **Minimum beaconów** | **3** | Wymagane minimum 3 beacony w zasięgu do pozycjonowania |
+| **Częstotliwość** | 1 Hz | Pomiary UWB co 1 sekundę |
+| **Filtrowanie pięter** | ±1 piętro | Tag widzi beacony z aktualnego piętra ±1 |
+
+### Lista beaconów
+
+| ID | Nazwa | Pozycja (x,y,z) | Piętro | Typ |
+|----|-------|-----------------|--------|-----|
+| BCN-B01 | Piwnica - wejście | (20, 24, -3.0) | -1 | anchor |
+| BCN-B02 | Piwnica - kotłownia | (7, 6, -3.0) | -1 | hazard |
+| BCN-001 | Wejście główne | (2, 5, 0) | 0 | entry |
+| BCN-002 | Hol - centrum | (10, 5, 0) | 0 | anchor |
+| BCN-003 | Korytarz północny | (20, 11, 0) | 0 | anchor |
+| BCN-004 | Sala konferencyjna | (10, 19, 0) | 0 | anchor |
+| BCN-005 | Klatka schodowa - parter | (35, 19, 0) | 0 | stairs |
+| BCN-006 | Wejście boczne | (38, 20, 0) | 0 | entry |
+| BCN-101 | Open space - północ | (10, 5, 3.2) | 1 | anchor |
+| BCN-102 | Open space - południe | (10, 12, 3.2) | 1 | anchor |
+| BCN-103 | Sala szkoleń | (35, 7, 3.2) | 1 | anchor |
+| BCN-104 | Klatka schodowa - 1p | (35, 21, 3.2) | 1 | stairs |
+| BCN-201 | Sala A | (10, 6, 6.4) | 2 | anchor |
+| BCN-202 | Sala B | (30, 6, 6.4) | 2 | anchor |
+| BCN-203 | Laboratorium | (12, 20, 6.4) | 2 | anchor |
+| BCN-007 | Centrum - północ | (20, 5, 0) | 0 | anchor |
+| BCN-008 | Centrum - południe | (20, 18, 0) | 0 | anchor |
+| BCN-105 | Open space - centrum | (20, 10, 3.2) | 1 | anchor |
 
 ### Algorytm pozycjonowania
 
 Symulator wykorzystuje **NLSE (Non-Linear Least Squares Estimation)** z filtrem Kalmana:
 
-1. **Zbieranie pomiarów** - odległości UWB do beaconów w zasięgu
-2. **Trilateration** - obliczanie pozycji na podstawie ≥3 beaconów
-3. **Fuzja IMU** - korekta dryfu z danych akcelerometru/żyroskopu
-4. **Filtr Kalmana** - wygładzanie trajektorii, predykcja
+1. **Zbieranie pomiarów** - tag zapisuje odległości do wszystkich beaconów w zasięgu ≤15m
+2. **Publikacja w API** - tablica `uwb_measurements` zawiera min. 3 beacony (jeśli dostępne) lub więcej
+3. **Trilateration** - obliczanie pozycji na podstawie ≥3 beaconów
+4. **Fuzja IMU** - korekta dryfu z danych akcelerometru/żyroskopu
+5. **Filtr Kalmana** - wygładzanie trajektorii, predykcja
+
+> **Uwaga:** Pozycjonowanie działa tylko gdy tag ma w zasięgu minimum 3 beacony. Jeśli jest mniej, pozycja nie jest aktualizowana.
 
 **Parametry jakości pozycji:**
 - `confidence` - pewność pozycji (0.0 - 1.0)
@@ -769,7 +855,7 @@ Status serwera i symulacji.
   "simulation_speed": 1.0,
   "connected_clients": 3,
   "firefighters_count": 6,
-  "beacons_count": 17,
+  "beacons_count": 18,
   "active_alerts": 1
 }
 ```
@@ -826,6 +912,29 @@ Lista alarmów. Parametr `active=true` zwraca tylko nierozwiązane.
 ### POST /api/v1/simulation/control
 Sterowanie symulacją i nagrywaniem.
 
+**Dostępne akcje:**
+
+| Akcja | Parametry | Opis |
+|-------|-----------|------|
+| `trigger_man_down` | `firefighter_id` | Wywołaj alarm man-down |
+| `trigger_sos` | `firefighter_id` | Wywołaj alarm SOS |
+| `beacon_offline` | `beacon_id` | Symuluj awarię beacona |
+| `scba_refill` | `firefighter_id` | Uzupełnij butlę SCBA do 100% |
+| `acknowledge_alert` | `alert_id`, `acknowledged_by` | Potwierdź alarm |
+| `trigger_environment_hazard` | `firefighter_id`, `hazard_type` | Wywołaj zagrożenie środowiskowe |
+| `start_recording` | `name` | Rozpocznij nagrywanie incydentu |
+| `stop_recording` | `reason` (opcjonalny) | Zatrzymaj nagrywanie |
+| `reset` | - | Resetuj symulację |
+| `pause` | - | Zatrzymaj symulację |
+| `resume` | - | Wznów symulację |
+| `set_speed` | `speed` (0.1-10.0) | Zmień prędkość symulacji |
+
+**Typy zagrożeń środowiskowych (`hazard_type`):**
+- `high_co` - wysokie stężenie CO
+- `low_oxygen` - niski poziom tlenu
+- `explosive_gas` - wykryto gaz wybuchowy (LEL)
+- `high_temperature` - wysoka temperatura
+
 ```json
 // Trigger man-down
 { "action": "trigger_man_down", "params": { "firefighter_id": "FF-003" } }
@@ -842,7 +951,7 @@ Sterowanie symulacją i nagrywaniem.
 // Potwierdź alert
 { "action": "acknowledge_alert", "params": { "alert_id": "...", "acknowledged_by": "..." } }
 
-// Wywołaj zagrożenie środowiskowe
+// Wywołaj zagrożenie środowiskowe (CO)
 { "action": "trigger_environment_hazard", "params": { "firefighter_id": "FF-001", "hazard_type": "high_co" } }
 
 // Rozpocznij nagrywanie
@@ -860,8 +969,19 @@ Sterowanie symulacją i nagrywaniem.
 // Resume
 { "action": "resume" }
 
-// Set speed
+// Set speed (0.1 - 10x)
 { "action": "set_speed", "params": { "speed": 2.0 } }
+```
+
+**Odpowiedź:**
+```json
+{
+  "success": true,
+  "running": true,
+  "speed": 1.0,
+  "recording": false,
+  "timestamp": "2025-01-15T14:30:00.000Z"
+}
 ```
 
 ---
@@ -1040,15 +1160,19 @@ asyncio.run(connect())
 
 ---
 
-## 🆕 Nowe funkcje w v2.7
+## Nowe funkcje w v2.7.0
 
-- **Rozszerzona telemetria** - GPS, trilateration, drift, environment sensors
-- **System SCBA** - pełna symulacja aparatu powietrznego
-- **Czujniki środowiskowe** - CO, CO2, O2, LEL, temperatura
-- **Stacja pogodowa** - dane z pojazdu
-- **System nagrywania** - zapis i odtwarzanie incydentów
-- **Rozszerzone beacony** - wykrywanie tagów, prędkość, kierunek
-- **RECCO** - pełna symulacja systemu
+- **Rozszerzona telemetria** - GPS, trilateration, drift, environment sensors, heading, PASS status
+- **System SCBA** - pełna symulacja aparatu powietrznego Dräger PSS 7000
+- **Czujniki środowiskowe** - CO, CO2, O2, LEL, temperatura, wilgotność
+- **Stacja pogodowa** - dane z pojazdu (temperatura, wiatr, ciśnienie, opady)
+- **System nagrywania** - zapis i odtwarzanie incydentów do PostgreSQL
+- **Rozszerzone beacony** - wykrywanie tagów, prędkość, kierunek, RSSI
+- **RECCO** - pełna symulacja systemu z detektorem i reflektorami
+- **PASS** - system wykrywania bezruchu z pre-alarmem (20s) i alarmem (30s)
+- **Black Box** - rejestracja danych urządzenia
+- **Auto-resolve** - alerty automatycznie rozwiązują się po 3 minutach
+- **Zagrożenia środowiskowe** - możliwość wywołania alertów CO, O2, LEL, temperatura
 
 ---
 
@@ -1065,5 +1189,5 @@ asyncio.run(connect())
 
 ---
 
-*Dokumentacja API Symulatora Nieśmiertelnik PSP v2.7*
-*HackNation 2025 - Grudzień 2025*
+*Dokumentacja API Symulatora Nieśmiertelnik PSP v2.7.0*
+*GovTech / HackNation 2025 - Grudzień 2025*

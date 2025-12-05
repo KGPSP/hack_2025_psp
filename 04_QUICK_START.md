@@ -129,7 +129,7 @@ curl -X POST https://niesmiertelnik.replit.app/api/v1/simulation/control \
 │
 ├── server/                  # Backend Express
 │   ├── index.ts             # Serwer HTTP/WebSocket
-│   ├── routes.ts            # API + logika symulacji (~2700 linii)
+│   ├── routes.ts            # API + logika symulacji (~2800 linii)
 │   ├── db.ts                # PostgreSQL (Neon)
 │   └── telemetry-recorder.ts # Nagrywanie incydentów
 │
@@ -139,12 +139,13 @@ curl -X POST https://niesmiertelnik.replit.app/api/v1/simulation/control \
 └── doc_hack/                # Dokumentacja hackathonu
     ├── README.md                 # Przegląd pakietu
     ├── 01_KARTA_WYZWANIA_v2.md
-    ├── 02_SYMULATOR_API_v2.md    # ⭐ Dokumentacja API
+    ├── 02_SYMULATOR_API_v2.md    # Dokumentacja API
     ├── 03_KONCEPCJA_HW_WYTYCZNE.md
     ├── 04_QUICK_START.md         # Ten plik
     ├── 05_TECHNOLOGIA_RECCO.md
     ├── EKOSYSTEM_URZADZEN_PELNA_SPECYFIKACJA.md
-    └── FORMALNO_PRAWNE_HACKNATION.md
+    ├── FORMALNO_PRAWNE_HACKNATION.md
+    └── IDEAS.md                  # Pomysły na projekty
 ```
 
 ---
@@ -217,10 +218,29 @@ console.log(`Alarm: ${scba.alarm_low_pressure}`);
 
 ### Odległości UWB do beaconów
 ```javascript
-data.uwb_measurements.forEach(m => {
-  console.log(`${m.beacon_name}: ${m.range_m.toFixed(2)}m`);
-  console.log(`  RSSI: ${m.rssi_dbm} dBm, LOS: ${m.los}, Quality: ${m.quality}`);
-});
+// uwb_measurements zawiera WSZYSTKIE beacony w zasięgu ≤15m (min. 3 do pozycjonowania)
+if (data.uwb_measurements) {
+  console.log(`Beaconów w zasięgu: ${data.uwb_measurements.length}`);
+  data.uwb_measurements.forEach(m => {
+    console.log(`${m.beacon_name}: ${m.range_m.toFixed(2)}m (quality: ${m.quality})`);
+  });
+}
+
+// Przykładowe dane (strażak w centrum budynku):
+// Beaconów w zasięgu: 4
+// Hol - centrum: 2.15m (quality: excellent)
+// Wejście główne: 8.23m (quality: excellent)
+// Centrum - północ: 10.82m (quality: good)
+// Korytarz północny: 12.05m (quality: good)
+```
+
+### PASS (Personal Alert Safety System)
+```javascript
+const pass = data.pass_status;
+console.log(`Status: ${pass.status}`);           // active, pre_alarm, alarm, disabled
+console.log(`Czas bezruchu: ${pass.time_since_motion_s}s`);
+console.log(`Próg alarmu: ${pass.alarm_threshold_s}s`);  // domyślnie 30s
+console.log(`Alarm aktywny: ${pass.alarm_active}`);
 ```
 
 ### Barometr (określanie piętra)
