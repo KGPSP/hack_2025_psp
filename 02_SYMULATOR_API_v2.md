@@ -1,5 +1,5 @@
 # API Symulatora Nieśmiertelnik PSP
-## Dokumentacja v2.7.0 - Tryb Hackathonowy dla GovTech 2025 | Pula nagród: 25 000 PLN
+## Dokumentacja v2.7.0 - Tryb Hackathonowy HackNation 2025 – Zaprogramuj przyszłość Polski | Pula nagród: 25 000 PLN
 
 > **„Ratują innych, ryzykując własne życie. Czas, by technologia pomogła im w tym zadaniu. Stwórz rozwiązanie, które zwiększy bezpieczeństwo strażaków – nawet tam, gdzie nie ma sieci ani sygnału GPS."**
 
@@ -1190,4 +1190,4 @@ asyncio.run(connect())
 ---
 
 *Dokumentacja API Symulatora Nieśmiertelnik PSP v2.7.0*
-*GovTech / HackNation 2025 - Grudzień 2025*
+*HackNation 2025 – Zaprogramuj przyszłość Polski - Grudzień 2025*

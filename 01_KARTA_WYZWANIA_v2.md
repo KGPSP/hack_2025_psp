@@ -1,5 +1,5 @@
 # 🔥 WYZWANIE: Cyfrowy Nieśmiertelnik PSP v2.7
-## Hackathon GovTech 2025 – Pełna Specyfikacja
+## HackNation 2025 – Zaprogramuj przyszłość Polski
 
 > **„Ratują innych, ryzykując własne życie. Czas, by technologia pomogła im w tym zadaniu. Stwórz rozwiązanie, które zwiększy bezpieczeństwo strażaków – nawet tam, gdzie nie ma sieci ani sygnału GPS."**
 
@@ -150,6 +150,10 @@ Fuzja danych z wielu źródeł:
 | M5 | Status beaconów na mapie (aktywne/nieaktywne) | 5 |
 | M6 | Dokumentacja HW tagu nieśmiertelnika (schemat + BOM) | 10 |
 | M7 | Dokumentacja HW beacona UWB (schemat + BOM) | 5 |
+| M8 | Lista strażaków z możliwością filtrowania (ID, imię, zespół, status, bateria) i szybkiego przejścia do widoku na mapie | 5 |
+| M9 | Ekran szczegółów strażaka z ostatnimi alertami, trendem tętna i poziomu baterii oraz informacją o ostatniej pozycji i czasie kontaktu | 5 |
+| M10 | Podstawowy widok aktywnych alertów (np. MAN-DOWN, SOS, niski poziom powietrza) z możliwością sortowania po czasie i priorytecie | 5 |
+| M11 | Minimalna koncepcja działania w środowisku bez GPS/GSM (np. tunel, podziemia) – opis jak system lokalizuje strażaka wyłącznie na podstawie beaconów UWB i IMU | 5 |
 
 ### 🟡 DOBRZE BY MIAŁ – 25 punktów
 
@@ -159,6 +163,10 @@ Fuzja danych z wielu źródeł:
 | D2 | Wizualizacja 3D budynku (Three.js) | 7 |
 | D3 | Historia trajektorii (odtwarzanie ruchu) | 5 |
 | D4 | Dokumentacja bramki NIB | 5 |
+| D5 | Widok zarządzania zespołami (roty/sekcje) z kolorystycznym oznaczeniem na mapie i filtrowaniem po zespole | 5 |
+| D6 | Zestaw scenariuszy symulacji (np. pożar piwnicy, akcja w tunelu) uruchamianych przez wywołanie akcji w symulatorze | 5 |
+| D7 | Prosty moduł analizy po akcji (after action review) – przegląd trajektorii, alertów i zdarzeń w osi czasu dla wybranego incydentu | 5 |
+| D8 | Koncepcja integracji z istniejącymi systemami PSP (np. Stanowisko Kierowania) – opis przepływu informacji, jakie dane i w jakiej formie można przekazywać | 5 |
 
 ### 🟢 BONUS – 15 punktów
 
@@ -168,6 +176,10 @@ Fuzja danych z wielu źródeł:
 | B2 | Symulacja czarnej skrzynki (zapis/odczyt) | 5 |
 | B3 | Integracja z mapami OSM/BIM | 3 |
 | B4 | Voice alerts / text-to-speech | 2 |
+| B5 | Eksport prostego raportu po akcji (CSV/PDF) z listą strażaków, alertów i podstawowymi statystykami | 3 |
+| B6 | Tryb szkoleniowy z checklistą dla instruktora i możliwością oznaczania wykonanych kroków podczas ćwiczeń | 3 |
+| B7 | Koncepcja mobilnej aplikacji dla dowódcy (tablet/smartfon) – szkice ekranów, główne scenariusze użycia oraz wymagania dotyczące pracy offline | 3 |
+| B8 | Propozycja rozszerzenia systemu o inne służby (np. GOPR, TOPR, ratownictwo górnicze) – opis różnic w środowisku pracy i potrzebach lokalizacyjnych | 3 |
 
 ---
 

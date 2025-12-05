@@ -23,7 +23,7 @@ Materiały formalne i zgody: `FORMALNO_PRAWNE_HACKNATION.md`
 doc_hack/
 │
 ├── README.md                       # Ten plik
-├── 01_KARTA_WYZWANIA_v2.md         # Oficjalna karta wyzwania GovTech
+├── 01_KARTA_WYZWANIA_v2.md         # Oficjalna karta wyzwania HackNation 2025 – Zaprogramuj przyszłość Polski
 ├── 02_SYMULATOR_API_v2.md          # Dokumentacja API symulatora
 ├── 03_KONCEPCJA_HW_WYTYCZNE.md     # Jak dokumentować hardware
 ├── 04_QUICK_START.md               # Przewodnik szybkiego startu
@@ -355,7 +355,7 @@ Pełna dokumentacja API: `02_SYMULATOR_API_v2.md`
 
 | Dokument | Opis |
 |----------|------|
-| `01_KARTA_WYZWANIA_v2.md` | Oficjalna karta wyzwania GovTech |
+| `01_KARTA_WYZWANIA_v2.md` | Oficjalna karta wyzwania HackNation 2025 – Zaprogramuj przyszłość Polski |
 | `02_SYMULATOR_API_v2.md` | Pełna dokumentacja API symulatora |
 | `03_KONCEPCJA_HW_WYTYCZNE.md` | Wytyczne do dokumentacji hardware |
 | `04_QUICK_START.md` | Szybki start dla uczestników |

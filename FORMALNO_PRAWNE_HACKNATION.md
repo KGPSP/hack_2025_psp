@@ -44,7 +44,7 @@ Poniższe dokumenty są dostępne u organizatora (Ministerstwo Cyfryzacji / PROI
 | Dokument | Opis |
 |----------|------|
 | Informacje KG PSP | Instrukcje operacyjne: logistyka stoiska, rejestracje, montaż/demontaż, agenda, Discord |
-| Template Wyzwania | Oficjalny szablon karty wyzwania GovTech |
+| Template Wyzwania | Oficjalny szablon karty wyzwania HackNation 2025 – Zaprogramuj przyszłość Polski |
 
 ---
 

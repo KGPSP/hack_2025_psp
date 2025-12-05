@@ -1,6 +1,6 @@
 # Pomysły na projekty hackathonowe
 
-Jako uczestnik hackathonu GovTech 2025 masz dostęp do bogatej telemetrii, którą możesz wykorzystać do budowy innowacyjnych rozwiązań dla straży pożarnej.
+Jako uczestnik hackathonu HackNation 2025 – Zaprogramuj przyszłość Polski masz dostęp do bogatej telemetrii, którą możesz wykorzystać do budowy innowacyjnych rozwiązań dla straży pożarnej.
 
 ---
 
