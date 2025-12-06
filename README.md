@@ -215,34 +215,6 @@ Pełna dokumentacja API: `02_SYMULATOR_API_v2.md`
 
 ---
 
-## Wymagania hackathonu
-
-### MUSI MIEĆ (MVP) – 60 punktów
-
-- [ ] Wizualizacja mapy 2D budynku z pozycjami strażaków (15 pkt)
-- [ ] Wskaźnik kondygnacji dla każdego strażaka (5 pkt)
-- [ ] Panel parametrów: tętno, bateria, stan ruchu (10 pkt)
-- [ ] Alarm MAN-DOWN po 30s bezruchu (10 pkt)
-- [ ] Status beaconów na mapie (5 pkt)
-- [ ] Dokumentacja HW tagu nieśmiertelnika (10 pkt)
-- [ ] Dokumentacja HW beacona UWB (5 pkt)
-
-### DOBRZE BY MIAŁ – 25 punktów
-
-- [ ] Algorytm fuzji danych (EKF/UKF) (8 pkt)
-- [ ] Wizualizacja 3D (Three.js) (7 pkt)
-- [ ] Historia trajektorii (5 pkt)
-- [ ] Dokumentacja bramki NIB (5 pkt)
-
-### BONUS – 15 punktów
-
-- [ ] Procedura RECCO – UI dla zespołu RIT (5 pkt)
-- [ ] Symulacja czarnej skrzynki (5 pkt)
-- [ ] Integracja z mapami OSM/BIM (3 pkt)
-- [ ] Voice alerts (2 pkt)
-
----
-
 ## Szacowany poziom trudności
 
 | Zadanie | Trudność | Czas |
