@@ -139,6 +139,16 @@ Fuzja danych z wielu źródeł:
 
 ## ✅ WYMAGANIA FUNKCJONALNE
 
+### 🧩 Założenia technologiczne (implementacja)
+
+- Projekt powinien być realizowany jako **aplikacja webowa** z:
+  - **Frontendem** opartym o `React` (dowolny bundler/framework: Vite, Next.js itp.),
+  - **Backendem** napisanym w `Node.js` **lub** `Pythonie` (REST/WebSocket, integracja z symulatorem).
+- Kod źródłowy zespołu powinien być:
+  - Utrzymywany w **repozytorium Git (np. GitHub/GitLab)**,
+  - Udostępniony w formie umożliwiającej pobranie i uruchomienie (instrukcja w `README`).
+- **MVP musi dać się uruchomić w środowisku Wykonawcy** (np. `npm install && npm run dev` / `docker compose up` / `python -m ...`), tak aby mentorzy mogli samodzielnie zweryfikować działanie rozwiązania na własnym sprzęcie.
+
 ### 🔴 MUSI MIEĆ (MVP) – 60 punktów
 
 | ID | Funkcjonalność | Punkty |
