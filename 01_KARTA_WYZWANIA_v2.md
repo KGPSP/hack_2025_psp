@@ -610,25 +610,25 @@ ws.send(JSON.stringify({ command: "set_speed", speed: 2.0 }));
 
 ---
 
-## 🏆 KRYTERIA OCENY (pomocnicza dot punktu: Punktacja:)
+## ~~🏆 KRYTERIA OCENY (pomocnicza dot punktu: Punktacja:)~~
 
-| Kategoria | Waga | Opis |
+| ~~Kategoria~~ | ~~Waga~~ | ~~Opis~~ |
 |-----------|------|------|
-| **Funkcjonalność aplikacji** | 30% | Kompletność MVP, UX, responsywność |
-| **Algorytm lokalizacji** | 20% | Dokładność, płynność, obsługa edge cases |
-| **Koncepcja hardware** | 25% | Kompletność, realność, innowacyjność |
-| **Jakość kodu i dokumentacji** | 15% | Czytelność, README, komentarze |
-| **Prezentacja** | 10% | Klarowność, demo, odpowiedzi na pytania |
+| ~~**Funkcjonalność aplikacji**~~ | ~~30%~~ | ~~Kompletność MVP, UX, responsywność~~ |
+| ~~**Algorytm lokalizacji**~~ | ~~20%~~ | ~~Dokładność, płynność, obsługa edge cases~~ |
+| ~~**Koncepcja hardware**~~ | ~~25%~~ | ~~Kompletność, realność, innowacyjność~~ |
+| ~~**Jakość kodu i dokumentacji**~~ | ~~15%~~ | ~~Czytelność, README, komentarze~~ |
+| ~~**Prezentacja**~~ | ~~10%~~ | ~~Klarowność, demo, odpowiedzi na pytania~~ |
 
-### Szczegółowa rubrika Hardware (25 punktów)
+### ~~Szczegółowa rubrika Hardware (25 punktów)~~
 
-| Aspekt | Punkty | Kryteria |
+| ~~Aspekt~~ | ~~Punkty~~ | ~~Kryteria~~ |
 |--------|--------|----------|
-| Kompletność schematu | 8 | Wszystkie bloki, połączenia, anteny |
-| BOM z cenami | 5 | Realne komponenty, źródła, suma |
-| Uzasadnienie wyborów | 5 | Dlaczego te komponenty, trade-offs |
-| Analiza energii | 4 | Pobór mocy, czas pracy |
-| Wymiary i obudowa | 3 | Realność, IP rating |
+| ~~Kompletność schematu~~ | ~~8~~ | ~~Wszystkie bloki, połączenia, anteny~~ |
+| ~~BOM z cenami~~ | ~~5~~ | ~~Realne komponenty, źródła, suma~~ |
+| ~~Uzasadnienie wyborów~~ | ~~5~~ | ~~Dlaczego te komponenty, trade-offs~~ |
+| ~~Analiza energii~~ | ~~4~~ | ~~Pobór mocy, czas pracy~~ |
+| ~~Wymiary i obudowa~~ | ~~3~~ | ~~Realność, IP rating~~ |
 
 ---
 
