@@ -149,47 +149,49 @@ Fuzja danych z wielu źródeł:
   - Udostępniony w formie umożliwiającej pobranie i uruchomienie (instrukcja w `README`).
 - **MVP musi dać się uruchomić w środowisku Wykonawcy** (np. `npm install && npm run dev` / `docker compose up` / `python -m ...`), tak aby mentorzy mogli samodzielnie zweryfikować działanie rozwiązania na własnym sprzęcie.
 
+### Punktacja:
+
 ### 🔴 MUSI MIEĆ (MVP) – 60 punktów
 
 | ID | Funkcjonalność | Punkty |
 |----|----------------|--------|
-| M1 | Wizualizacja mapy 2D budynku z pozycjami strażaków | 15 |
+| M1 | Wizualizacja mapy 2D budynku z pozycjami strażaków | 10 |
 | M2 | Wskaźnik kondygnacji (piętro) dla każdego strażaka | 5 |
-| M3 | Panel parametrów: tętno, bateria, stan ruchu | 10 |
-| M4 | Alarm MAN-DOWN po 30s bezruchu | 10 |
-| M5 | Status beaconów na mapie (aktywne/nieaktywne) | 5 |
-| M6 | Dokumentacja HW tagu nieśmiertelnika (schemat + BOM) | 10 |
-| M7 | Dokumentacja HW beacona UWB (schemat + BOM) | 5 |
-| M8 | Lista strażaków z możliwością filtrowania (ID, imię, zespół, status, bateria) i szybkiego przejścia do widoku na mapie | 5 |
-| M9 | Ekran szczegółów strażaka z ostatnimi alertami, trendem tętna i poziomu baterii oraz informacją o ostatniej pozycji i czasie kontaktu | 5 |
-| M10 | Podstawowy widok aktywnych alertów (np. MAN-DOWN, SOS, niski poziom powietrza) z możliwością sortowania po czasie i priorytecie | 5 |
-| M11 | Minimalna koncepcja działania w środowisku bez GPS/GSM (np. tunel, podziemia) – opis jak system lokalizuje strażaka wyłącznie na podstawie beaconów UWB i IMU | 5 |
+| M3 | Panel parametrów: tętno, bateria, stan ruchu | 8 |
+| M4 | Alarm MAN-DOWN po 30s bezruchu | 8 |
+| M5 | Status beaconów na mapie (aktywne/nieaktywne) | 4 |
+| M6 | Dokumentacja HW tagu nieśmiertelnika (schemat + BOM) | 7 |
+| M7 | Dokumentacja HW beacona UWB (schemat + BOM) | 4 |
+| M8 | Lista strażaków z możliwością filtrowania (ID, imię, zespół, status, bateria) i szybkiego przejścia do widoku na mapie | 4 |
+| M9 | Ekran szczegółów strażaka z ostatnimi alertami, trendem tętna i poziomu baterii oraz informacją o ostatniej pozycji i czasie kontaktu | 4 |
+| M10 | Podstawowy widok aktywnych alertów (np. MAN-DOWN, SOS, niski poziom powietrza) z możliwością sortowania po czasie i priorytecie | 3 |
+| M11 | Minimalna koncepcja działania w środowisku bez GPS/GSM (np. tunel, podziemia) – opis jak system lokalizuje strażaka wyłącznie na podstawie beaconów UWB i IMU | 3 |
 
 ### 🟡 DOBRZE BY MIAŁ – 25 punktów
 
 | ID | Funkcjonalność | Punkty |
 |----|----------------|--------|
-| D1 | Algorytm fuzji danych (EKF/UKF) dla lokalizacji | 8 |
-| D2 | Wizualizacja 3D budynku (Three.js) | 7 |
-| D3 | Historia trajektorii (odtwarzanie ruchu) | 5 |
-| D4 | Dokumentacja bramki NIB | 5 |
-| D5 | Widok zarządzania zespołami (roty/sekcje) z kolorystycznym oznaczeniem na mapie i filtrowaniem po zespole | 5 |
-| D6 | Zestaw scenariuszy symulacji (np. pożar piwnicy, akcja w tunelu) uruchamianych przez wywołanie akcji w symulatorze | 5 |
-| D7 | Prosty moduł analizy po akcji (after action review) – przegląd trajektorii, alertów i zdarzeń w osi czasu dla wybranego incydentu | 5 |
-| D8 | Koncepcja integracji z istniejącymi systemami PSP (np. Stanowisko Kierowania) – opis przepływu informacji, jakie dane i w jakiej formie można przekazywać | 5 |
+| D1 | Algorytm fuzji danych (EKF/UKF) dla lokalizacji | 6 |
+| D2 | Wizualizacja 3D budynku (Three.js) | 5 |
+| D3 | Historia trajektorii (odtwarzanie ruchu) | 3 |
+| D4 | Dokumentacja bramki NIB | 3 |
+| D5 | Widok zarządzania zespołami (roty/sekcje) z kolorystycznym oznaczeniem na mapie i filtrowaniem po zespole | 3 |
+| D6 | Zestaw scenariuszy symulacji (np. pożar piwnicy, akcja w tunelu) uruchamianych przez wywołanie akcji w symulatorze | 3 |
+| D7 | Prosty moduł analizy po akcji (after action review) – przegląd trajektorii, alertów i zdarzeń w osi czasu dla wybranego incydentu | 1 |
+| D8 | Koncepcja integracji z istniejącymi systemami PSP (np. Stanowisko Kierowania) – opis przepływu informacji, jakie dane i w jakiej formie można przekazywać | 1 |
 
 ### 🟢 BONUS – 15 punktów
 
 | ID | Funkcjonalność | Punkty |
 |----|----------------|--------|
-| B1 | Procedura RECCO – UI dla zespołu RIT | 5 |
-| B2 | Symulacja czarnej skrzynki (zapis/odczyt) | 5 |
-| B3 | Integracja z mapami OSM/BIM | 3 |
-| B4 | Voice alerts / text-to-speech | 2 |
-| B5 | Eksport prostego raportu po akcji (CSV/PDF) z listą strażaków, alertów i podstawowymi statystykami | 3 |
-| B6 | Tryb szkoleniowy z checklistą dla instruktora i możliwością oznaczania wykonanych kroków podczas ćwiczeń | 3 |
-| B7 | Koncepcja mobilnej aplikacji dla dowódcy (tablet/smartfon) – szkice ekranów, główne scenariusze użycia oraz wymagania dotyczące pracy offline | 3 |
-| B8 | Propozycja rozszerzenia systemu o inne służby (np. GOPR, TOPR, ratownictwo górnicze) – opis różnic w środowisku pracy i potrzebach lokalizacyjnych | 3 |
+| B1 | Procedura RECCO – UI dla zespołu RIT | 2 |
+| B2 | Symulacja czarnej skrzynki (zapis/odczyt) | 2 |
+| B3 | Integracja z mapami OSM/BIM | 2 |
+| B4 | Voice alerts / text-to-speech | 1 |
+| B5 | Eksport prostego raportu po akcji (CSV/PDF) z listą strażaków, alertów i podstawowymi statystykami | 2 |
+| B6 | Tryb szkoleniowy z checklistą dla instruktora i możliwością oznaczania wykonanych kroków podczas ćwiczeń | 2 |
+| B7 | Koncepcja mobilnej aplikacji dla dowódcy (tablet/smartfon) – szkice ekranów, główne scenariusze użycia oraz wymagania dotyczące pracy offline | 2 |
+| B8 | Propozycja rozszerzenia systemu o inne służby (np. GOPR, TOPR, ratownictwo górnicze) – opis różnic w środowisku pracy i potrzebach lokalizacyjnych | 2 |
 
 ---
 
@@ -608,7 +610,7 @@ ws.send(JSON.stringify({ command: "set_speed", speed: 2.0 }));
 
 ---
 
-## 🏆 KRYTERIA OCENY
+## 🏆 KRYTERIA OCENY (pomocnicza dot punktu: Punktacja:)
 
 | Kategoria | Waga | Opis |
 |-----------|------|------|
